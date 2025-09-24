@@ -9,7 +9,7 @@ import { Navigate } from "react-router-dom";
 const ProtectedRoute = ({ children }) => {
   if (!isAuthenticated()) {
     // console.log('isAuthenticated: ', isAuthenticated());
-    return <Navigate to="/" replace />;
+    return <Navigate to="/Adminlogin" replace />;
   }
   return children;
 };
