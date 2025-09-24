@@ -1,0 +1,83 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 30px 0;
+  position: relative !important;
+}
+
+/* Tabs container */
+.tabs {
+  position: fixed;
+  top: 86px;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--item-tab-menudiscount);
+  z-index: 100;
+  box-shadow: 8px -17px 7px 10px #ffffff;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.sidebarOpen {
+  left: 219px;
+  width: calc(100% - 219px);
+}
+
+/* Sidebar closed */
+.sidebarClosed {
+  left: 70px;
+  width: calc(100% - 70px);
+}
+
+
+/* Each tab */
+.tab {
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Active tab */
+.active {
+  background: var(--red-color);
+  color: #fff;
+  padding: 10px 54px;
+}
+
+.content {
+  margin-top: 42px;
+}
+
+@media (max-width: 982px) {
+  .tabs {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 0px 35px;
+  }
+
+}
+
+@media(max-width:950px) {
+  .sidebarOpen {
+    left: 0px;
+    width: calc(100% - 0px);
+  }
+}
+
+@media (max-width: 776px) {
+  .tabs {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0px 35px;
+  }
+
+}

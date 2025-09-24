@@ -1,0 +1,67 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto !important;
+
+}
+
+.mainWrapper {
+  display: flex;
+  flex: 1;
+  margin-top: 60px;
+}
+
+.noScroll {
+  overflow-y: hidden !important;
+}
+
+
+.pageContent {
+  flex: 1;
+  background: var(--white-bg);
+  transition: margin-left 0.3s ease;
+  overflow-y: hidden !important;
+}
+
+.pageContent::-webkit-scrollbar {
+  width: 1px;
+  height: 2px;
+}
+
+.pageContent::-webkit-scrollbar-thumb {
+  background-color: rgb(209, 211, 211);
+}
+
+.sidebarOpen {
+  margin-left: 230px;
+}
+
+.sidebarClosed {
+  margin-left: 70px;
+}
+
+@media(max-width:1300px) {
+  .sidebarOpen {
+    margin-left: 220px;
+  }
+
+  .sidebarClosed {
+    margin-left: 70px;
+  }
+}
+
+@media(max-width:944px) {
+  .sidebarOpen {
+    margin-left: 0px;
+  }
+
+  .sidebarClosed {
+    margin-left: 60px;
+  }
+
+  .noScroll {
+    overflow-y: auto !important;
+  }
+
+}

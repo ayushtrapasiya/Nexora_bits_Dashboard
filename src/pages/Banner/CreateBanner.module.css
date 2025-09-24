@@ -1,0 +1,137 @@
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  
+}
+
+/* Upload Box */
+.uploadBox {
+  border: 2px solid var(--red-color);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+   
+  box-shadow: 0px 3px 6px rgba(0, 34, 68, 0.1);
+  position: relative;
+  min-height: 200px;
+}
+
+.uploadText {
+  color: #5a6e85;
+  margin-bottom: 10px;
+}
+
+.fileInput {
+  display: none; /* hide default */
+}
+
+/* Custom Select File Button */
+.customFileBtn {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: var(--red-color);
+  color: white;
+  font-weight: bold;
+}
+
+/* Preview Images */
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.previewItem {
+  position: relative;
+}
+
+.previewImg {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--red-color);
+}
+
+/* Remove Button on Images */
+.removeBtn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--red-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  width: 22px;
+  height: 22px;
+  line-height: 18px;
+}
+
+/* Dropdowns & Row */
+.row {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  gap: 15px;
+  justify-content: end;
+}
+
+.select {
+  padding: 8px 12px;
+  border: 1px solid var(--red-color);
+  border-radius: 25px;
+  outline: none;
+}
+
+/* Buttons */
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  /* background: var(--red-color); */
+  color: rgb(0, 0, 0);
+  border:1px solid var(--red-color) !important ;
+}
+
+.addBtn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border-radius: 6px;
+  border: none;
+  background: var(--red-color);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.timeRow{
+    display: flex;
+    gap: 10px;
+}
+.scheduleBox{
+display: flex;
+gap: 10px;
+}
+ 
+.backBtn {
+  background: none;
+  border: 1px solid #F41F1F;
+ height: 40px;
+ width: 200px;
+  border-radius: 6px;
+  cursor: pointer;
+}

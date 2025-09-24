@@ -1,0 +1,184 @@
+.container {
+  margin: 20px 0;
+}
+
+
+
+
+.backBtn {
+  background: none;
+  border: 1px solid #F41F1F;
+  padding: 6px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* -------- Top Buttons -------- */
+.topButtons {
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+  gap: 12px;
+  margin: 0 20px 16px 0;
+}
+
+.cancelBtn {
+  /* padding: padding: 7px;; */
+  padding: 7px 30px;
+  border: 1px solid #ED1C24;
+  color: black;
+  border-radius: 8px;
+  font-size: 14px;
+  background: var(--white-bg);
+  cursor: pointer;
+}
+
+.cancelBtn:hover {
+  background: #ffeaea;
+}
+
+.saveBtn {
+  padding: 8px 30px;
+  background: var(--red-color);
+  color: white;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.saveBtn:hover {
+  background: #d1141b;
+}
+
+/* -------- Title -------- */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  border-left: none;
+  padding: 14px 0 14px 20px;
+  margin-bottom: 20px;
+}
+
+/* -------- Dynamic Fields -------- */
+.categoryBox {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px 20px 20px;
+  background: var(--white-bg);
+  display: flex;
+  align-items: center;
+}
+
+.fieldRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%;
+  /* position: re; */
+}
+
+.fieldRow>.field {
+  flex: 1 1 250px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px;
+  width: 90%;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #ED1C24;
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  margin-right: 30px;
+  flex: 0 0 auto;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+.deleteBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-top: 14px;
+}
+
+.deleteIcon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/* -------- Add More -------- */
+.addMoreBtn {
+  margin: 20px;
+  padding: 6px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--red-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .fieldRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .statusWrapper {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .input {
+    width: 100%;
+  }
+}
+
+
+.dropdownWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  color: rgb(57, 57, 57);
+  appearance: none;
+  padding-left: 12px;
+}
+
+.dropdownIcon {
+  position: absolute;
+  right: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555;
+}

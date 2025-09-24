@@ -1,0 +1,342 @@
+  .wrapper {
+    border-radius: 10px;
+    background: var(--white-bg);
+  }
+
+  /* -------- Header -------- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
+  }
+
+  .backBtn {
+    border: 1px solid var(--red-color);
+    background-color: var(--white-bg);
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 7px 20px;
+    font-size: 14px;
+    color: black;
+  }
+
+  .cancelbtn {
+    border: 1px solid var(--red-color);
+    background-color: var(--white-bg);
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .submitbtn {
+    border: none;
+    outline: none;
+    color: var(--white-bg);
+    font-size: 14px;
+    background-color: var(--red-color);
+    padding: 8px 20px;
+    border-radius: 6px;
+    margin-left: 10px;
+  }
+
+  /* -------- Form -------- */
+  .form {
+    padding: 20px 30px;
+  }
+
+  .formRow {
+    align-items: center;
+  }
+
+  .formRow label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 4px;
+    letter-spacing: 0.4px;
+  }
+
+  /* -------- Inputs -------- */
+  .inputField {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 10px 12px;
+    outline: none;
+    transition: border 0.2s ease-in-out;
+  }
+
+  /* -------- Checkbox & Radio -------- */
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: var(--red-color);
+    border: 2px solid var(--red-color) !important;
+    margin-right: 6px;
+    cursor: pointer;
+  }
+
+
+
+  .formRow small {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* -------- Textarea -------- */
+  textarea {
+    resize: none;
+    font-family: inherit;
+  }
+
+  /* -------- Responsive Fix -------- */
+  @media (max-width: 992px) {
+    .formRow label {
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .backBtn {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      padding: 15px;
+    }
+  }
+
+
+  /* -------- Validation Options -------- */
+  .validationOption {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .validationTitle {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .validationDesc {
+    font-size: 14px;
+    color: #666;
+    margin-left: 25px;
+    /* radio button ke align ke liye */
+  }
+
+  /* Calendar box styling */
+  .customCalendar {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Red highlight for selected date */
+  .selectedDate {
+    background-color: red !important;
+    color: #fff !important;
+    border-radius: 50%;
+  }
+
+  /* Custom Today + Clear buttons */
+  .footerBtns {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-top: 1px solid #ddd;
+    font-weight: 600;
+    font-size: 13px;
+    background-color: none;
+  }
+
+  .footerBtns span {
+    cursor: pointer;
+    color: red;
+  }
+
+
+
+  /* Dropdown Box */
+  .dropdownBox {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 16.5%;
+    margin-bottom: 20px;
+    max-width: 400px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Category List Container */
+  .categoryList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 44px;
+    position: relative;
+  }
+
+
+
+  /* Vertical dotted line */
+  .categoryList::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: -15px;
+    width: 1px;
+    height: calc(100% - -4px);
+    border-left: 2px dotted #e63946;
+  }
+
+  /* Category Item */
+  .categoryItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #000;
+    gap: 8px;
+    margin-left: 8px;
+  }
+
+  /* Horizontal connector for child checkboxes */
+  .categoryItem::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -21px;
+    width: 21px;
+    border-top: 2px dotted #e63946;
+  }
+
+  /* Remove horizontal connector for "Select All" */
+  .categoryItem.root::before {
+    content: none;
+  }
+
+  .root {
+    margin-left: 24px;
+    margin-bottom: 10px;
+  }
+
+  /* Checkbox custom theme */
+  .categoryItem input[type="checkbox"] {
+    accent-color: #e63946;
+  }
+
+
+  /* Tree List */
+  .treeList {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 10px;
+  }
+
+  /* Vertical dotted line for tree */
+  .treeList::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 19px;
+    width: 1px;
+    height: 100%;
+    border-left: 2px dotted #e63946;
+  }
+
+  /* Each item */
+  .treeItem {
+    position: relative;
+    padding-left: 28px;
+    margin: 6px 0;
+  }
+
+
+  /* Horizontal dotted line to connect */
+  .treeItem::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    width: 28px;
+    border-top: 2px dotted #e63946;
+  }
+
+  /* Remove connector for root */
+  .root::before {
+    content: none;
+  }
+
+  /* Checkbox + label */
+  .checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #111;
+    cursor: pointer;
+    margin-left: 9px;
+  }
+
+  /* Expand/Collapse inside */
+  .expandBtn {
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+    text-align: center;
+    border: 1px solid #e63946;
+    color: #e63946;
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .expandBtn:hover {
+    background: #e63946;
+    color: #fff;
+  }
+
+  /* Placeholder (for children without expand) */
+  .expandBtnPlaceholder {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  /* Sub-tree indentation */
+  .subTree {
+    margin-left: 20px;
+    position: relative;
+  }
+
+  /* Vertical line continues in subTree */
+  .subTree::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 8px;
+    width: 1px;
+    height: calc(100% + 9px);
+    border-left: 2px dotted #e63946;
+  }
+
+  /* Checkbox color */
+  .treeItem input[type="checkbox"] {
+    accent-color: #e63946;
+    cursor: pointer;
+  }

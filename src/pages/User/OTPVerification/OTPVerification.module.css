@@ -1,0 +1,98 @@
+.otpBox {
+  text-align: center;
+  padding: 25px;
+}
+
+
+.title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subText {
+  font-size: 0.95rem;
+  color: rgba(102, 112, 133, 1);
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.subText span {
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+.otpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otpInputs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.otpInput {
+  width: 55px;
+  height: 56px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: 1.5px solid red;
+  border-radius: 6px;
+  outline: none;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.otpInput:focus {
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+}
+
+.filled {
+  background: #fff5f5;
+}
+
+.resend {
+  letter-spacing: 0.3px;
+
+  color: rgba(102, 112, 133, 1);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.resend button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  color: rgba(102, 112, 133, 1);
+
+}
+
+.btnRow {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cancelBtn {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 6px 5.2rem;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.verifyBtn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 5.2rem;
+  border-radius: 7px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}

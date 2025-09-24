@@ -1,0 +1,147 @@
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+  --sidebar-width-open: 450px;
+  --sidebar-width-closed: 70px;
+}
+
+.react-datepicker__header {
+  background-color: var(--white-bg) !important;
+}
+
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  border-radius: 0.3rem;
+  background-color: var(--red-color) !important;
+  color: rgb(230, 229, 229) !important;
+}
+
+
+.react-datepicker-wrapper {
+  width: 100%
+}
+
+.react-datepicker__today-button {
+  background: var(--white-bg) !important;
+  border-top: none !important;
+}
+
+
+#root {
+  overflow-y: hidden;
+}
+
+
+:root {
+
+  --red-color: rgba(237, 28, 36, 1);
+  --sidebar-active-color: rgba(253, 212, 212, 1);
+  --barchart-pink: rgba(250, 150, 150, 1);
+  --metrix-box-bgcolor: rgba(251, 171, 171, 1);
+  --metrix-card-border: rgba(220, 220, 220, 1);
+
+
+  --running-order-text: rgba(100, 100, 100, 1);
+
+  --input-border: rgba(220, 220, 220, 1);
+  --item-detail-table-header: rgba(253, 212, 212, 1);
+  --item-tab-menudiscount: rgba(252, 188, 188, 1);
+
+  --white-bg: white;
+  --overlay-color: rgba(0, 0, 0, 0.4);
+
+  --itemlist-active-sidebar: rgba(253, 221, 221, 1);
+  --itemlist-sidebar-border: rgba(244, 31, 31, 1)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+ 
+
+/* this class use for No Found items in list */
+.no-category-container {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 5rem;
+}
+
+.no-category-icon {
+  font-size: 2rem;
+  color: #000;
+  background: #ED1C24;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.no-category-text {
+  color: #ED1C24;
+  /* red */
+  font-size: 1.8rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.no-category-subtext {
+  /* margin-top: 0.8rem; */
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Shine effect only on text */
+.shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 80px;
+  background: linear-gradient(120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 100%);
+  animation: shineMove 2s linear infinite;
+}
+
+@keyframes shineMove {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+
+
+/* --------------------------end here---------------------- */
+

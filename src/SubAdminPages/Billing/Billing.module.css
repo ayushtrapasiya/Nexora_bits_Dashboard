@@ -1,0 +1,358 @@
+.container {
+  display: flex;
+  height: 90vh;          
+  font-family: Arial, sans-serif;
+  overflow: hidden !important;
+  background-color: #FAFAFA;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: white;
+  border-right: 1px solid #ddd;
+  padding: 0px;
+ 
+   position: -webkit-sticky; /* safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start;   /* important for flex parents */
+  height: 90vh;            /* full viewport height so it doesn't collapse */
+  overflow-y: auto;       
+}
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  /* border-radius: 6px; */
+}
+.sidebar li:hover,
+.sidebar .active {
+  background: var(--sidebar-active-color);
+  font-weight: bold;
+  position: relative;
+}
+
+.sidebar .active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--red-color);
+  border-radius: 6px 0 0 6px;
+}
+
+/* Main Section */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+    scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+.main::-webkit-scrollbar {
+  display: none;
+}
+.searchBox {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 10px;
+ box-shadow: 0px -16px 0px #FAFAFA;
+  position: sticky;
+  top: 0;
+  background-color: #FAFAFA;
+  align-items: center;
+  z-index: 100;
+}
+.searchBox >div{
+  position: relative;
+  flex: 2;
+}
+.searchBox input {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--red-color);
+  border-radius: 10px ;
+
+}
+.filterBtn {
+  flex: 1;
+  height: 100%;
+ display: flex;
+  padding: 10px 15px;
+  border: 0px solid #ddd;
+  background: #FAFAFA;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+.itemCard {
+  height: 80px;
+  position: relative;
+  background: #ffe0e0;
+  padding: 15px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  overflow: hidden;
+}
+.itemCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--red-color);
+  border-radius: 6px 0 0 6px;
+}
+
+/* Billing Section */
+.billing {
+  width: 400px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  /* border-left: 1px solid #ddd; */
+  height: 90vh;
+}
+
+/* Pickup */
+.pickupBtn {
+  background: var(--red-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px 6px 6px 6px;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Bill No Header */
+.billHeader {
+  background: #DCDCDC;
+  /* padding: 8px; */
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.billInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* apne hisaab se adjust kar sakte ho */
+  font-family: Arial, sans-serif;
+
+}
+
+.billInfo input {
+  border: none;
+  border-bottom: 1px solid #ccc; /* sirf neeche line */
+  /* padding: 10px 5px; */
+  font-size: 16px;
+  outline: none; /* focus hone par blue border hatane ke liye */
+}
+
+.billInfo input:focus {
+  border-bottom: 1px solid #555; /* focus hone par thoda dark */
+}
+/* Bill Table */
+.billTable {
+  border-top: 1px solid #ddd;
+  /* margin-top: 10px; */
+  overflow-y: auto;
+  
+}
+.billHeadRow {
+  display: grid;
+  grid-template-columns: 1fr 80px 80px;
+  padding: 0px 8px ;
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+  background: #dcdcdc;
+}
+.billRow {
+  display: grid;
+grid-template-columns: 1fr 103px 87px;
+  align-items: center;
+  padding: 8px;
+  /* border-bottom: 1px solid #eee; */
+}
+.itemName {
+  color: black;
+ font-size: 14px;
+}
+.qtyBtns{
+  display: flex;
+}
+.remove{
+ 
+  border-radius: 50%;
+  height: 10px ;
+  width: 10px;
+  cursor: pointer;
+}
+.qtyBtns button {
+  padding: 1px 3px;
+  margin: 0 3px;
+  border: 1px solid #000000;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.variants {
+  font-size: 12px;
+  color: #555;
+  margin: 0px 0 0 25px;
+  margin-top: -10px;
+  padding: 0;
+}
+.variants > p {
+  margin-bottom: 0;
+}
+/* Total */
+.total {
+  text-align: right;
+  font-size: 16px;
+  /* margin: 10px; */
+}
+.total > p {
+  margin-bottom: 0;
+}
+
+.payment {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden; /* corner rounded effect ke liye */
+}
+
+.payment button {
+  flex: 1;
+  /* padding: 10px 15px;   */
+  height: 40px;
+  justify-content: center;
+  border: none;
+  border-right: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.payment button:last-child {
+  border-right: none; /* last wale ka border hatao */
+}
+
+.payment button:hover {
+  background: #f8f8f8;
+}
+
+.payment .active {
+  background: #d4f0d4; /* halka green bg */
+  color: #008000; /* green text */
+  font-weight: bold;
+}
+
+/* Paid Checkbox */
+.paidCheck {
+  margin: 5px auto;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px;
+}
+.actions button {
+  
+  padding: 10px;
+  border: none;
+  background: var(--red-color);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.billItemsList {
+  max-height: 250px;   /* yaha ap apni height adjust kar sakte ho */
+    /* scroll enable */
+    scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+.billItemsList::-webkit-scrollbar {
+  display: none;
+}
+.popupBox {
+  position: absolute;
+  top: 100%; /* item ke niche show hoga */
+  left: 0;
+  width: 250px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 12px;
+  z-index: 10; /* overlay ke liye */
+}
+.itemCard {
+  position: relative; /* taaki popup uske andar position ho */
+  cursor: pointer;
+}
+.itemCardActive {
+  z-index: 100;
+}
+
+/* Popup box (absolute positioned, overlays other cards) */
+.popupBox {
+  position: absolute;
+  top: calc(100% + 8px); /* just below the item card */
+  left: 0;
+  width: 260px;
+  max-width: calc(100vw - 40px);
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  padding: 12px;
+  z-index: 500;
+}
+
+/* Inner spacing */
+.popupInner h4 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+}
+.popupInner select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,173 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1010;
+}
+
+.modalBox {
+  background: var(--white-bg);
+  border-radius: 10px;
+  width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* scrollbar */
+.modalBox::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modalBox::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 4px;
+}
+
+/* header */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 20px 8px 20px;
+}
+
+.closeBtn {
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.closeBtn:hover {
+  transform: rotate(90deg);
+  color: #e53935;
+}
+
+/* ================== MAIN DETAIL TABLE ================== */
+.detailTableWrap {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  background: var(--white-bg);
+}
+
+.detailTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.detailTable tr+tr td,
+.detailTable tr+tr th {
+  border-top: 1px solid #eee;
+}
+
+.detailTable th {
+  width: 25%;
+  text-align: left;
+  font-weight: 600;
+  padding: 11px 14px;
+  vertical-align: top;
+}
+
+.detailTable td {
+  padding: 11px 12px;
+  vertical-align: top;
+}
+
+.detailTable th:nth-child(3) {
+  padding-left: 12px;
+}
+
+/* ================== IMAGE PLACEHOLDERS ================== */
+.imageBox {
+  width: 120px;
+  height: 100px;
+  background: #D9D9D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #666;
+}
+
+/* ================== STATUS PILL ================== */
+
+
+.statusActive {
+  color: #2e7d32;
+  font-weight: 600;
+
+}
+
+.statusInactive {
+  color: #c62828;
+  font-weight: 600;
+
+}
+
+/* ================== SECTION CARDS ================== */
+.sectionCard {
+  border-radius: 8px;
+  background: var(--white-bg);
+  padding: 6px;
+}
+
+.sectionHeader {
+  padding: 6px 0;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.sectionTableWrap {
+  border: 1px solid #5B5B5B;
+  border-radius: 6px;
+}
+
+/* ================== INNER TABLE (Platform Wise, Variations, Addons) ================== */
+.sectionTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border: 1px solid #5B5B5B;
+  /* black border */
+  border-radius: 6px;
+  /* rounded corners */
+  overflow: hidden;
+  /* apply radius cleanly */
+}
+
+.sectionTable th,
+.sectionTable td {
+  border: 1px solid #5B5B5B;
+  /* black borders inside */
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.sectionTable th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+/* Variations + Addons side-by-side */
+.flexTables {
+  display: flex;
+  gap: 20px;
+}
+
+.flexTables>div {
+  flex: 1;
+}
+
+.tdRight {
+  text-align: right;
+}

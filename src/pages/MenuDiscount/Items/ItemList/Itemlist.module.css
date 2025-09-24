@@ -1,0 +1,417 @@
+    .container {
+        display: flex;
+        height: 100vh;
+        background: var(--white-bg);
+    }
+
+    /* Sidebar */
+    .sidebar {
+        background: var(--white-bg);
+        border-right: 1px solid #ddd;
+        transition: width 0.3s;
+        position: fixed;
+        overflow-y: auto;
+        height: 78vh;
+        z-index: 100;
+
+    }
+
+    .sidebar::-webkit-scrollbar {
+        width: 1px !important;
+    }
+
+
+
+    .sidebarOpen {
+        width: 220px;
+    }
+
+    .sidebarClosed {
+        width: 60px;
+    }
+
+    .sidebarToggle {
+        width: 100%;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        background: var(--white-bg);
+        cursor: pointer;
+        border: none;
+        /* removed black border */
+    }
+
+    .sidebarList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .sidebarItem {
+        padding: 12px 16px;
+        cursor: pointer;
+        transition: background 0.2s, border-left 0.2s;
+    }
+
+    .sidebarItem:hover {
+        background: #f5f5f5;
+    }
+
+    .activeItem {
+        background: var(--itemlist-active-sidebar);
+        border-left: 4px solid #e53935;
+        color: black;
+        font-weight: bold;
+        position: relative;
+        /* padding-left: 28px; */
+        /* space for "::" */
+    }
+
+    /* .activeItem::before {
+        content: "::";
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #e53935;
+        font-weight: bold;
+    } */
+
+    /* Main content */
+    .mainContent {
+        flex: 1;
+        margin-left: 220px;
+        transition: margin-left 0.3s;
+        overflow-x: hidden;
+    }
+
+    .sidebarClosed~.mainContent {
+        margin-left: 60px;
+    }
+
+
+    .sidebarClosed~.mainContent {
+        margin-left: 60px;
+    }
+
+    /* -------- Header -------- */
+    .header {
+        position: fixed;
+        top: 130px;
+        left: 437px;
+        right: 0;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--white-bg);
+        border-bottom: 1px solid #ddd;
+        padding: 18px 20px;
+        transition: left 0.3s ease, width 0.3s ease;
+        z-index: 10;
+    }
+
+    /* global sidebar close to tab */
+    .header.isclosesidebar {
+        left: 290px;
+    }
+
+
+    /* jab dono sidebar close ho tab */
+    .sidebarClosed~.mainContent .header.isclosesidebar {
+        left: 130px !important;
+    }
+
+    /* categories filter ka sidebar close ho tab */
+
+    .sidebarClosed~.mainContent .header {
+        left: 290px;
+    }
+
+    .leftControls {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .searchWrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .searchIcon {
+        position: absolute;
+        left: 12px;
+        color: black;
+        font-size: 16px;
+    }
+
+
+    .search {
+        border: 1px solid #ED1C24;
+        border-radius: 8px;
+        padding: 11px 0px 10px 40px;
+        font-size: 14px;
+        outline: none;
+    }
+
+
+    .search::placeholder {
+        color: rgb(41, 41, 41);
+        opacity: 1;
+    }
+
+    .dropdownWrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown {
+        appearance: none;
+        /* native arrow hide */
+        border: 1px solid #ED1C24;
+        border-radius: 8px;
+        padding: 10px 46px 10px 12px;
+        font-size: 14px;
+        outline: none;
+        background: var(--white-bg);
+    }
+
+    .dropdownIcon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #555;
+    }
+
+    .saveBtn {
+        background: var(--red-color);
+        color: #fff;
+        padding: 8px 40px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s;
+        font-size: 14px;
+    }
+
+
+    .addBtn {
+        background: var(--red-color);
+        color: #fff;
+        padding: 8px 40px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s;
+        font-size: 14px;
+    }
+
+
+
+    .saveBtn:hover,
+    .addBtn:hover {
+        background: #c62828;
+    }
+
+
+    .tableContainer {
+        margin-top: calc(var(--header-height, 0px) - 11px);
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: calc(100vh - 260px);
+        position: relative;
+    }
+
+    .tableContainer::-webkit-scrollbar {
+        width: 1px
+    }
+
+    .tableContainer::-webkit-scrollbar-thumb {
+        background-color: white;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 14px;
+        min-width: 800px;
+    }
+
+    .table thead th {
+        position: sticky !important;
+        top: 0 !important;
+        background-color: var(--item-detail-table-header);
+        color: #333;
+        z-index: 8;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px 16px;
+        border: none;
+    }
+
+    .table thead {
+
+        background-color: var(--item-detail-table-header);
+        color: #333;
+    }
+
+    .table tbody tr {
+        border-bottom: 1px solid #ddd;
+        /* only row border */
+    }
+
+    /* .table tbody tr:last-child {
+        border-bottom: none;
+    } */
+
+
+    .table img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+
+    .noData {
+        text-align: center;
+        padding: 20px;
+        color: black;
+    }
+
+    /* Special bottom border for text cells */
+    .cell {
+        /* border-bottom: 1px solid #ddd !important; */
+        max-width: 100px;
+        /* jitni width chahiye utni set karo */
+        white-space: nowrap;
+        /* text ko ek line me rakhega */
+        overflow: hidden;
+        /* extra text ko hide karega */
+        text-overflow: ellipsis;
+    }
+
+    .editBtn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 6px;
+        font-size: 20px;
+    }
+
+    .deleteBtn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+
+    .table tbody tr:hover {
+        background-color: rgb(230, 224, 224) !important;
+        cursor: pointer !important;
+    }
+
+    @media(max-width:1178px) {
+        .header.bothOpen .addBtn {
+            margin-top: 8px;
+        }
+
+        .leftControls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+    }
+
+    @media(max-width:1113px) {
+
+        .bothOpen .tableContainer {
+            margin-top: 124px !important;
+        }
+    }
+
+    @media(max-width:1006px) {
+        .search {
+            margin-bottom: 5px;
+        }
+
+    }
+
+    @media(max-width:950px) {
+        .sidebarClosed~.mainContent .header {
+            left: 190px;
+        }
+
+        .header.isclosesidebar {
+            left: 280px;
+        }
+
+        .bothOpen .header {
+            left: 30px !important;
+        }
+
+        .sidebarOpen~.mainContent .header .addBtn {
+            margin-top: 8px;
+        }
+
+        .sidebarClosed~.mainContent .header.isclosesidebar {
+            left: 119px !important;
+        }
+
+        .bothOpen .tableContainer {
+            margin-top: 84px !important;
+        }
+
+        .componentSidebarOpen {
+            margin-top: 150px !important;
+            /* component sidebar open */
+        }
+    }
+
+
+
+    .sidebarClosedTable {
+        margin-top: 89px !important;
+        /* global sidebar closed on small screen */
+    }
+
+    .componentSidebarOpen {
+        margin-top: 82px !important;
+        /* component sidebar open */
+    }
+
+
+    @media(max-width:933px) {
+        .componentSidebarOpen {
+            margin-top: 129px !important;
+            /* component sidebar open */
+        }
+    }
+
+    @media(max-width:777px) {
+
+
+        .sidebarClosedTable {
+            margin-top: 120px !important;
+            /* global sidebar closed on small screen */
+        }
+
+        .componentSidebarOpen {
+            margin-top: 173px !important;
+            /* component sidebar open */
+        }
+    }

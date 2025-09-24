@@ -1,0 +1,189 @@
+.storeMetrics {
+  background: var(--white-bg);
+  /* padding: 16px; */
+  border-radius: 8px;
+  margin: 20px;
+  border: 1px solid #ddd;
+
+}
+
+.headerSection {
+  margin-top: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.headerSection h3 {
+  font-size: 28px;
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+.storeMetrics p {
+  color: gray;
+  margin-left: 9px;
+}
+
+.metricsRow {
+  margin: 13px 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.metricsLeft {
+  display: flex;
+  gap: 24px;
+}
+
+.metricItem {
+  padding: 0 10px;
+  border-left: 4px solid #ddd;
+}
+
+.metricItem h4 {
+  margin: 0 0 4px 0;
+  font-size: 19px;
+  color: rgb(79, 78, 78);
+}
+
+.metricValue {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 21px;
+}
+
+.metricValue .up {
+  color: green;
+  font-size: 18px
+}
+
+.metricValue .down {
+  color: #FA9696;
+  font-size: 18px
+}
+
+.metricsRight {
+  display: flex;
+  gap: 8px;
+}
+
+
+
+.metricsRight select {
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: none;
+  background: #E7EAEE;
+  color: #64748B;
+  height: 30px;
+}
+
+.filterBtn {
+  background: #E7EAEE;
+  border: none;
+  padding: 2px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #64748B;
+  font-size: 14px;
+}
+
+.recharts-wrapper {
+  overflow-y: hidden;
+}
+
+/* Chart Container */
+.chartContainer {
+  padding: 16px;
+  width: 100%;
+  height: auto;
+  overflow-y: hidden;
+}
+
+@media(max-width:1250px) {
+  .headerSection h3 {
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .headerSection p {
+    font-size: 15px;
+  }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 776px) {
+  .metricsRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .metricsRight {
+    margin-top: 20px;
+  }
+
+  .chartContainer {
+    padding: 16px 0;
+  }
+}
+
+@media (max-width:1011px) {
+  .chartContainer {
+    padding: 16px 0;
+  }
+}
+
+.recharts-legend-item-text {
+  color: #000 !important;
+}
+
+.custom-tooltip {
+  background-color: var(--white-bg);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tooltip {
+  font-size: 12px;
+}
+
+/* Normal size */
+.recharts-cartesian-axis-tick tspan {
+  font-size: 15px;
+  fill: gray;
+}
+
+/* Jab screen 1250px se chhoti ho */
+@media (max-width: 1250px) {
+  .recharts-cartesian-axis-tick tspan {
+    font-size: 13px !important;
+  }
+}
+
+/* Default font size */
+.recharts-legend-item-text {
+  font-size: 16px;
+  color: #000;
+}
+
+/* Jab screen 1250px ya usse chhoti ho */
+@media (max-width: 1250px) {
+  .recharts-legend-item-text {
+    font-size: 13px;
+  }
+}
+
+.recharts-bar-rectangle path {
+  transition: all 0.8s ease-in-out;
+}

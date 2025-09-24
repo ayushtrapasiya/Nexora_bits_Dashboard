@@ -1,0 +1,104 @@
+/* ---------- Header ---------- */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  padding-top: 17px;
+}
+
+.modalHeader h5 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #444;
+}
+
+.closeBtn:hover {
+  color: #f30808;
+
+}
+
+/* ---------- Form ---------- */
+.formWrapper {
+  margin: 15px 19px 41px 19px;
+
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+
+
+/* ---------- Form Groups ---------- */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.formGroup input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+
+/* ---------- Info Icon ---------- */
+.infoIcon {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ---------- Button Row ---------- */
+.btnRow {
+  margin-top: 31px;
+}
+
+.cancelBtn {
+  padding: 8px 20px;
+  border: 1px solid var(--red-color);
+  background: var(--white-bg);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+
+}
+
+
+.saveBtn {
+  padding: 8px 20px;
+  border: none;
+  background: var(--red-color);
+  color: var(--white-bg);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.errorText {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

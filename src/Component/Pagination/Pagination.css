@@ -1,0 +1,49 @@
+/* pagination css */
+
+.paginationInfo {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+
+}
+
+.paginationInfo span {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.dropdown {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-weight: 500;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pageBtn {
+  border: none !important;
+  color: black;
+  transition: 0.2s ease;
+}
+
+.pageBtn:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pageNumber {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.pageBtn svg {
+  font-size: 23px;
+  margin-left: 10px;
+}

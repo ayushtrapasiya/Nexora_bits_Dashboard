@@ -1,0 +1,443 @@
+.form {
+  width: 100%;
+  background: var(--white-bg);
+}
+
+.row {
+  display: grid;
+  grid-template-columns:
+    1.2fr
+    /* Name */
+    1fr
+    /* Short Code */
+    1.5fr
+    /* Online Display Name -> zyada space */
+    1.3fr
+    /* Category */
+    0.9fr
+    /* Price */
+    1.5fr
+    /* Description */
+    1fr
+    /* Dietary */
+    1.2fr
+    /* Order Type */
+    0.7fr
+    /* Variation -> chhota */
+    0.5fr;
+  gap: 12px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  align-items: baseline;
+}
+
+.labelRow {
+  background: var(--sidebar-active-color);
+  font-weight: 600;
+}
+
+.labelRow label {
+  font-weight: 600;
+  text-align: left;
+  /* padding-left: 10px; */
+  font-size: 14px;
+}
+
+.labelRow label:first-child {
+  padding-left: 10px;
+}
+
+/* Inputs */
+.row input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  min-width: 100px;
+}
+
+.row select {
+  appearance: none;
+  padding: 8px 2px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  min-width: 100px;
+}
+
+.row input[type="checkbox"] {
+  width: auto;
+  min-width: auto;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+/* Checkbox group inline */
+.checkboxGroup {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.section {
+  padding: 12px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.section h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.variationRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.variationRow select,
+.variationRow input {
+  padding: 9px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  max-width: 350px;
+
+}
+
+.addBtn {
+  background-color: var(--white-bg);
+  border: 1px solid #ccc;
+  padding: 10px 22px;
+  border-radius: 10px;
+  color: rgb(41, 41, 41);
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.removeBtn {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 0px 10px 2px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* Header buttons */
+.header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background:var(--white-bg);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 6px 30px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.exitBtn {
+  background: var(--white-bg);
+  color: #F41F1F;
+  border: 1px solid #F41F1F;
+}
+
+.menuBtn {
+  background: var(--red-color);
+  color: white;
+}
+
+.menuBtn:hover {
+  background: #d90d0d;
+}
+
+/* 🔥 Responsive Media Queries */
+@media (max-width: 1024px) {
+  .row {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .labelRow {
+    display: none;
+    /* mobile पर heading row हटाना */
+  }
+
+  .checkboxGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .variationRow {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .addBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+ 
+
+.dropdownWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  font-family: sans-serif;
+}
+
+/* Input Box */
+.inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: var(--white-bg);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.inputBox:hover {
+  border-color: #007bff;
+}
+
+/* Placeholder text */
+.placeholder {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Selected Tag */
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e6f0ff00;
+  color: #000000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.062);
+}
+
+.tag button {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.tag button:hover {
+  color: red;
+}
+
+/* Dropdown Arrow */
+.arrow {
+  margin-left: auto;
+  font-size: 12px;
+  color: #555;
+  pointer-events: none;
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--white-bg);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  z-index: 20;
+  max-height: 220px;
+  overflow-y: auto;
+  animation: fadeIn 0.15s ease-in-out;
+}
+
+/* Dropdown Option */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.option:hover {
+  background: #f4f7ff;
+}
+
+.option input {
+  cursor: pointer;
+}
+
+/* Small animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input with unit inside */
+.inputWrapper {
+  position: relative;
+  flex: 1;
+  max-width: 180px;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 8px 30px 8px 10px;
+  /* space for unit */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.inputUnit {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+  pointer-events: none;
+}
+
+/* Row flex fix */
+.variationRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Upload & Coupon buttons */
+.uploadBtn,
+.couponBtn {
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  position: relative;
+}
+.imgcount{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black;
+  right: -10px;
+  top: -10px;
+}
+.backBtn {
+  background: none;
+  border: 1px solid #F41F1F;
+ height: 40px;
+ width: 100px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox ke liye */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.addMoreBtn {
+  background-color: #F41F1F;
+  border: none;
+  color: white;
+  padding: 6px 30px;
+  font-size: 14px;
+  border-radius: 6px;
+  margin: 0px 0px 20px 20px;
+}
+
+.itemBlock {
+  margin-bottom: 22px;
+}
+.errorInput {
+  border: 1px solid red !important;
+}

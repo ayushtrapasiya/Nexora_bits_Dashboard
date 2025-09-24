@@ -1,0 +1,121 @@
+.runningOrders {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.4px;
+
+}
+
+/* Header */
+.header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.runningBtn {
+  background-color: var(--red-color);
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 8px 35px;
+  border-radius: 6px;
+  font-weight: 800;
+  cursor: default;
+}
+
+.refreshBtn {
+  background: none;
+  border: 1px solid var(--red-color);
+  padding: 0px 12px 3px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 27px;
+}
+
+/* Flex Row + Col system */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.col {
+  flex: 1 1 calc(33.33% - 20px);
+  min-width: 280px;
+}
+
+/* Top Boxes */
+.topBox {
+  background-color: var(--barchart-pink);
+  padding: 35px;
+  border-radius: 8px;
+  text-align: center;
+  color: #000000;
+}
+
+.topBox h4 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.topBox p {
+  margin: 10px 0 0;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* Card Boxes */
+.card {
+  border: 1px solid var(--red-color);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  background: var(--white-bg);
+  line-height: 25px;
+  height: 223px;
+}
+
+.card h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.gray {
+  color: var(--running-order-text);
+  margin: 14px 0;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+}
+
+.card h3 {
+  margin: 5px 0;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.card h2 {
+  margin-top: 9px;
+  font-size: 23px;
+  font-weight: bolder;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .col {
+    flex: 1 1 100%;
+    /* full width on small devices */
+  }
+}
+
+@media(max-width:1250px) {
+  .card {
+    height: 187px;
+  }
+
+}

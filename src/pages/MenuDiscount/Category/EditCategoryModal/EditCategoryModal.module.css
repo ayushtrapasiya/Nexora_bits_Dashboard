@@ -1,0 +1,101 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background: #fff;
+  width: 700px;
+  border-radius: 10px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 20px 10px 20px;
+  margin-bottom: 15px;
+}
+
+.closeBtn {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.field input {
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.checkboxField {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 24px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelBtn {
+  padding: 6px 20px;
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
+  border-radius: 6px;
+  background: var(--white-bg);
+  cursor: pointer;
+}
+
+.saveBtn {
+  padding: 6px 20px;
+  border: none;
+  background: var(--red-color);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}

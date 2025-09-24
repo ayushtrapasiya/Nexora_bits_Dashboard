@@ -1,0 +1,152 @@
+.card {
+  border: 1px solid var(--metrix-card-border);
+  border-radius: 8px;
+  background: var(--white-bg);
+  margin: 25px 20px 10px 20px;
+}
+
+/* Top row styling */
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--metrix-card-border);
+  padding-bottom: 10px;
+  padding: 20px 10px 10px 10px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #646464;
+}
+
+.icon {
+  color: var(--running-order-text);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.right select {
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--metrix-card-border);
+  background: none;
+  color: #000000;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.refreshBtn {
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 600;
+  border: 1px solid var(--metrix-card-border);
+  padding: 0px 9px 3px 9px;
+  border-radius: 10px;
+}
+
+/* Metrics Row */
+.metrics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metricBox {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+  border-right: 1px solid var(--metrix-card-border);
+}
+
+.metricBox:last-child {
+  border-right: none;
+  /* Last box me divider remove */
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h4 {
+  font-weight: 900;
+  font-size: 25px;
+  color: #646464;
+  font-weight: 750;
+  margin-bottom: 0;
+}
+
+.amount {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.iconCircle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.onlineOrder {
+
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.orders {
+  font-size: 16px;
+  color: #888;
+  margin-top: 41px;
+}
+
+@media(max-width:1250px) {
+  .title h4 {
+    font-size: 23px;
+    font-weight: 900;
+  }
+
+  .amount {
+    font-size: 20px;
+  }
+
+  .orders {
+    font-size: 15px;
+  }
+
+  .onlineOrder {
+    font-size: 26px;
+    font-weight: 900;
+    margin-left: 10px;
+
+  }
+}
+
+.zomatoImg {
+  height: 32px;
+}
+
+.moreIcon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forward {
+  margin-top: 30px;
+  color: var(--red-color);
+  font-size: 30px;
+  cursor: pointer;
+}

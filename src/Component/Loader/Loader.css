@@ -1,0 +1,132 @@
+.modaloverlay {
+  position: fixed;
+  top: 65px;
+  left: 220px;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffffff, #ffeaea, #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  background-size: 200% 200%;
+  animation: bgShift 5s infinite alternate;
+}
+
+
+.modaloverlay.fullscreen {
+  top: 0;
+  /* 🔹 Sirf AddUser me */
+  left: 0;
+}
+
+.loading-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  color: var(--red-color);
+}
+
+.loading-text span {
+  display: inline-block;
+  animation: waveBounce 2s ease-in-out infinite;
+}
+
+/* Smooth bounce */
+@keyframes waveBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(2px);
+  }
+}
+
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.box {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: rgba(241, 21, 21, 0.2);
+  border: 2px solid var(--red-color);
+  border-radius: 12px;
+  display: flex;
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--red-color);
+  opacity: 0;
+  animation: rotateItems 4s infinite;
+}
+
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.box:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.box:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.box:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.box:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.box:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.box:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+@keyframes rotateItems {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(50px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  20% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-50px);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+

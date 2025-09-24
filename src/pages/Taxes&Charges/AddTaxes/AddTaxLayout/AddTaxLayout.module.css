@@ -1,0 +1,76 @@
+/* AddTaxLayout.module.css */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Container */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: left;
+}
+
+.card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.card p {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+}
+
+.card:hover {
+  border-color: #e63946;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Active Card (NavLink active) */
+.activeCard {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  border: 2px solid #e63946;
+  border-radius: 12px;
+  background: #ffeef0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: left;
+}
+
+.activeCard h4 {
+  color: #e63946;
+}
+
+.formWrapper {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+  }
+}

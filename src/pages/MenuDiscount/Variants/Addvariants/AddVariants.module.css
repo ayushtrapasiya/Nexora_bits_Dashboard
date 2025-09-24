@@ -1,0 +1,157 @@
+.header {
+  background: var(--white-bg);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  z-index: 10;
+}
+
+
+.backBtn {
+  background: none;
+  border: 1px solid var(--red-color);
+  padding: 6px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.headerRight {
+  display: flex;
+  gap: 10px;
+}
+
+.cancelBtn {
+  border: 1px solid var(--red-color);
+  background: white;
+  padding: 6px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.saveBtn {
+  background: var(--red-color);
+  border: none;
+  color: white;
+  padding: 6px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+
+/* -------- Title -------- */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  border-left: none;
+  padding: 14px 0 14px 20px;
+  margin-bottom: 20px;
+}
+
+/* -------- Dynamic Fields -------- */
+.categoryBox {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px 20px 20px;
+  background: white;
+}
+
+.fieldRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%;
+  /* position: re; */
+}
+
+.fieldRow>.field {
+  flex: 1 1 250px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px;
+  width: 90%;
+  outline: none;
+}
+
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  margin-right: 30px;
+  flex: 0 0 auto;
+  /* Status fix रहे right side पर */
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+/* -------- Add More -------- */
+.addMoreBtn {
+  margin: 20px;
+  padding: 6px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--red-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .fieldRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .statusWrapper {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .input {
+    width: 100%;
+  }
+}
+
+
+.dropdownWrapper {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.dropdown {
+  color: rgb(57, 57, 57);
+  appearance: none;
+  padding-left: 12px;
+}
+
+.dropdownIcon {
+  position: absolute;
+  right: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555;
+}

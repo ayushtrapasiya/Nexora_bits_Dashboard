@@ -1,0 +1,12 @@
+.linechart .recharts-cartesian-axis-tick tspan {
+  fill: black !important;
+  font-size: 14px;
+}
+
+
+@media(max-width:1350px) {
+  .recharts-cartesian-axis-tick tspan {
+    font-size: 13px;
+  }
+
+}

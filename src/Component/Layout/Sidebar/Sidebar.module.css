@@ -1,0 +1,132 @@
+.sidebar {
+  background: var(--white-bg);
+  color: black;
+  transition: width 0.3s ease;
+  overflow-y: auto;
+  padding-left: 20px;
+  border-right: 1px solid #ddd;
+  z-index: 999;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  height: calc(100vh - 60px);
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: rgba(220, 220, 220, 1);
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 1);
+  border-radius: 10px;
+  min-height: 40px;
+
+}
+
+.sidebar.open {
+  width: 230px;
+}
+
+.sidebar.closed {
+  width: 70px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+  font-size: 14px;
+  margin-top: 3px;
+  font-weight: 500;
+  color: black;
+  white-space: nowrap;
+}
+
+.sidebar ul li:first-child .menuItem {
+  margin-top: 10px;
+}
+
+.sidebar.closed .menuItem {
+  justify-content: center;
+  gap: 0;
+}
+
+.icon {
+  font-size: 17px;
+  text-align: center;
+}
+
+.sidebar.closed .menuItem span:not(.icon) {
+  display: none !important;
+}
+
+.dropdownArrow {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.activeLink,
+.menuItem.active {
+  border-radius: 13px 0 0 13px;
+  background: var(--sidebar-active-color);
+  color: black !important;
+  font-weight: 600;
+}
+
+.activeLink .icon,
+.menuItem.active .icon {
+  color: black;
+}
+
+@media (max-width: 1300px) {
+  .menuItem {
+    font-size: 14px;
+  }
+
+  .sidebar.open {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuItem {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuItem {
+    font-size: 12px;
+  }
+}
+
+@media(max-width:950px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 65px;
+    height: calc(100vh - 65px);
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    width: 300px;
+  }
+
+
+}
