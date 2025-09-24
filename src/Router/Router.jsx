@@ -84,10 +84,6 @@ export default function Router() {
 
   let routes = createHashRouter([
     {
-      path: "/Adminlogin",
-      element: <Login />,
-    },
-    {
       path: "/",
       element: (
         <ProtectedRoute>
