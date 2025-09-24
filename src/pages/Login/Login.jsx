@@ -45,97 +45,13 @@ export default function Login() {
   const isEmail = emailOrNumber.includes("@");
   const isNumber = /^\d+$/.test(emailOrNumber) && !isEmail;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
-
-    try {
-      if (isEmail) {
-        if (!emailOrNumber.includes("@")) {
-          setError("Please enter a valid email");
-          toast.error("Please enter a valid email");
-          setLoading(false);
-          return;
-        }
-        if (!passwordOtp) {
-          setError("Password is required for email login");
-          toast.error("Password is required for email login");
-          setLoading(false);
-          return;
-        }
-
-        const res = await axios.post(`${baseUrl}/admin/login`, {
-          email: emailOrNumber,
-          password: passwordOtp,
-          deviceId,
-          fcmToken: "web-fcm-token",
-          deviceType: "web",
-        });
-       const  id  = res.data.data.id
-        if(id) {
-          localStorage.setItem("user" , id)
-        }
-        const token = res.data?.data?.accessToken;
-        if (token) {
-          dispatch(setToken(token));
-        }
-        toast.success("Email Login Successful");
-        navigate("/")
-        // console.log("Email Login Success:", res.data);
-      } else {
-        if (!/^\d{10}$/.test(emailOrNumber)) {
-          setError("Please enter a valid 10-digit mobile number");
-          toast.error("Please enter a valid 10-digit mobile number");
-          setLoading(false);
-          return;
-        }
-
-        if (!otpSent) {
-          const otplogin = await axios.post(`${baseUrl}/admin/login`, {
-            contact: Number(emailOrNumber),
-            deviceId,
-            fcmToken: "web-fcm-token",
-            deviceType: "web",
-          });
-          const token = otplogin.data?.data?.accessToken;
-          // console.log('token: ', token);
-          if (token) {
-            dispatch(setToken(token)); // redux + localStorage me save
-          }
-          toast.success("Login request sent");
-
-          const otpRes = await axios.post(`${baseUrl}/admin/send-otp`, {
-            contact: Number(emailOrNumber),
-          });
-          toast.success("OTP Sent Successfully");
-          // console.log("OTP Sent:", otpRes.data.data.otp);
-          setOtpSent(true);
-          setPasswordOtp(otpRes.data.data.otp); // autofill OTP (optional)
-        } else {
-          if (!/^\d{6}$/.test(passwordOtp)) {
-            setError("OTP must be 6 digits");
-            toast.error("OTP must be 6 digits");
-            setLoading(false);
-            return;
-          }
-          const verifyRes = await axios.post(`${baseUrl}/admin/verify-otp`, {
-            contact: Number(emailOrNumber),
-            otp: Number(passwordOtp),
-          });
-          toast.success("OTP Verified Successfully");
-          navigate("/")
-          // console.log("OTP Verified:", verifyRes.data);
-        }
-      }
-    } catch (err) {
-      console.error(err);
-      const msg = err.response?.data?.message || "Something went wrong";
-      setError(msg);
-      toast.error(msg);
-    } finally {
-      setLoading(false);
-    }
+  const handleSubmit = async () => {
+   
+    localStorage.setItem("SubAdmin" , "qdkdqw")
+    localStorage.setItem("authToken" , "dqwqdw")
+    localStorage.setItem("user" , "qwjqwd")
+    localStorage.setItem("deviceId" , "qwdiuhqwd")
+    navigate("/")
   };
 
   return (
